@@ -54,6 +54,10 @@ class HelloCommand extends Command
             $name = 'Anonym';
         }
 
+        if ($input->getOption('yell')) {
+            $name = strtoupper($name);
+        }
+
         $output->writeln('<info>Hello, ' . $name . '!</info>');
     }
 }
