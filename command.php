@@ -1,9 +1,10 @@
 <?php
-/*
- * To run in the console execute this command:
- * php command.php
- */
 
 error_reporting(E_ALL);
 
-echo 'This is a command.php file.' . PHP_EOL;
+use Symfony\Component\Console\Application;
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new Application();
+$app->run();
